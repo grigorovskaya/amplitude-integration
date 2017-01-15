@@ -1,0 +1,23 @@
+{
+  "name": "amplitude-integration",
+  "version": "1.0.0",
+  "description": "Amplitude API intergration",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grigorovskaya/amplitude-integration.git"
+  },
+  "author": "Nat Grigorovskaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grigorovskaya/amplitude-integration/issues"
+  },
+  "homepage": "https://github.com/grigorovskaya/amplitude-integration#readme",
+  "dependencies": {
+    "mocha": "^3.2.0",
+    "superagent": "^3.3.2"
+  }
+}
