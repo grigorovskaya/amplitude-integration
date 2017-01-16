@@ -31,7 +31,8 @@ Amplitude.prototype.take = function(event, callback) {
 
 
 /* route incoming events to http api/identify api
-@param {Object} message
+@param {Object} amplitudeEvent
+@param {Function} callback
 @return {Object}
 */
 Amplitude.prototype.send = function(amplitudeEvent, callback) {
@@ -44,7 +45,7 @@ Amplitude.prototype.send = function(amplitudeEvent, callback) {
 
 
 /* validate incoming message
-@param {Object} obj
+@param {Object} event
 @return {Boolean}
 */
 Amplitude.prototype.validate = function(event) {
@@ -61,7 +62,7 @@ Amplitude.prototype.validate = function(event) {
 
 
 /* map incoming message properties to amplitude properties
-@param {Object} obj
+@param {Object} event
 @return {Object}
 */
 
@@ -113,6 +114,7 @@ Amplitude.prototype.translate = function(event) {
 
 /* send an event to amplitude http api
 @param {Object} amplitudeEvent
+@param {Function} callback
 */
 // uses a callback that was passed to .take method; it can queue failed requests for later processing, gather stats, etc.
 
@@ -133,6 +135,7 @@ Amplitude.prototype.track = function(amplitudeEvent, callback) {
 
 /* send an event to amplitude identify
 @param {Object} amplitudeEvent
+@param {Function} callback
 */
 // uses a callback that was passed to .take method; it can queue failed requests for later processing, gather stats, etc.
 Amplitude.prototype.identify = function(amplitudeEvent, callback) {

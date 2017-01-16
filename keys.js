@@ -1,1 +1,1 @@
-module.exports =  '';
+module.exports =  'INSERT_YOUR_AMPLITUDE_API_KEY_HERE';
